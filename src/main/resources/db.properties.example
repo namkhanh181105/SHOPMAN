@@ -1,0 +1,9 @@
+# Mẫu cấu hình kết nối MySQL trong XAMPP (Cổng mặc định: 3306)
+# Sao chép tệp này thành db.properties (trong cùng thư mục src/main/resources/)
+# rồi cập nhật db.username / db.password phù hợp với máy của bạn.
+# Lưu ý: Cổng 3306 là cổng MySQL, tách biệt với 8080 (Apache XAMPP) và 9090 (Jetty).
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/shopman?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
+db.username=root
+db.password=
+

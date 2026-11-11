@@ -1,0 +1,225 @@
+/* ==========================================================================
+   ShopMan Stylesheet - Giao diện thiết kế theo đúng bài báo cáo PTTK
+   ========================================================================== */
+
+body {
+    background-color: #f7f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #212529;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.shopman-window {
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 2px solid #1a202c;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    min-height: 580px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header màu xanh đặc trưng */
+.shopman-header {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-bottom: 2px solid #1a202c;
+}
+
+/* Thanh điều hướng dạng tab có viền đen */
+.shopman-nav {
+    display: flex;
+    border-bottom: 2px solid #1a202c;
+    background-color: #eef2f6;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.shopman-nav-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #1a202c;
+}
+
+.shopman-nav-item:last-child {
+    border-right: none;
+}
+
+.shopman-nav-link {
+    display: block;
+    padding: 10px 14px;
+    color: #1a202c;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.shopman-nav-link:hover {
+    background-color: #dde4ed;
+    color: #1a202c;
+}
+
+/* Tab đang hoạt động màu xanh lá */
+.shopman-nav-item.active .shopman-nav-link,
+.shopman-nav-link.active {
+    background-color: #70db70;
+    font-weight: 700;
+}
+
+/* Phần nội dung chính */
+.shopman-body {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Khung thông tin chung (Mã hóa đơn, ngày tạo, trạng thái) */
+.info-box {
+    display: inline-block;
+    border: 1.5px solid #1a202c;
+    padding: 8px 16px;
+    margin-right: 15px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.status-highlight {
+    color: #d9534f;
+    font-weight: 700;
+}
+
+/* Bảng dữ liệu */
+.shopman-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border: 1.5px solid #1a202c;
+}
+
+.shopman-table th {
+    background-color: #d9e2ec;
+    color: #102a43;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 8px;
+    border: 1.5px solid #1a202c;
+    font-size: 0.95rem;
+}
+
+.shopman-table td {
+    padding: 8px 12px;
+    border: 1px solid #1a202c;
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+.shopman-table tr.total-row {
+    font-weight: 700;
+    background-color: #f7fafc;
+}
+
+/* Nút Xem chi tiết màu tím nhạt */
+.btn-view-detail {
+    background-color: #e6e6fa;
+    color: #3b28cc;
+    border: 1.5px solid #7c69ef;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.btn-view-detail:hover {
+    background-color: #d8d8f6;
+    color: #2714a6;
+    text-decoration: none;
+}
+
+/* Nút Quay lại màu vàng bo góc */
+.btn-back {
+    background-color: #fde49e;
+    color: #1a202c;
+    border: 2px solid #c7923e;
+    padding: 8px 26px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.btn-back:hover {
+    background-color: #fad97b;
+    color: #1a202c;
+    text-decoration: none;
+}
+
+/* Nút Thống kê màu xanh lam nhạt */
+.btn-statistic {
+    background-color: #cbe5ff;
+    color: #102a43;
+    border: 2px solid #85b7e9;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-statistic:hover {
+    background-color: #b3d7ff;
+}
+
+/* Nút menu con trên ManagerMainMenu8 */
+.btn-submenu {
+    background-color: #fdedba;
+    color: #1a202c;
+    border: 1.5px solid #1a202c;
+    padding: 12px 24px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-submenu:hover {
+    background-color: #fae298;
+    color: #1a202c;
+    text-decoration: none;
+}
+
+/* Khung đăng nhập */
+.login-card {
+    max-width: 420px;
+    margin: 50px auto;
+    border: 2px solid #1a202c;
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.login-header {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    padding: 14px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #1a202c;
+}
+

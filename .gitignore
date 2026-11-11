@@ -1,0 +1,39 @@
+# Thư mục build tự động của Maven
+/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Cấu hình kết nối DB cục bộ (có thể chứa username/mật khẩu cá nhân)
+# Chỉ đẩy tệp mẫu db.properties.example lên GitHub
+src/main/resources/db.properties
+
+# File log, file tạm và bản sao lưu
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+hs_err_pid*
+
+# Cấu hình IDE cá nhân (IntelliJ IDEA, VS Code, Eclipse, NetBeans)
+/.idea/
+*.iml
+*.ipr
+*.iws
+/.vscode/
+/.settings/
+/.project
+/.classpath
+/.factorypath
+nbactions.xml
+nb-configuration.xml
+
+# File hệ thống (macOS / Windows)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
