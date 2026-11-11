@@ -26,17 +26,6 @@
      ```
    - Mở `src\main\resources\db.properties` và cập nhật `db.url`, `db.username`, `db.password` theo MySQL trên máy (XAMPP mặc định dùng `db.username=root` và `db.password=` để trống; nếu chưa tạo `db.properties`, `DBUtil8` tạm nạp từ `db.properties.example`).
 
-4. **Tài khoản mẫu (theo `sql/shopman_db.sql`)**:
-   - Tất cả tài khoản mẫu dùng mật khẩu: `123456`
-   - `khachhang1`, `khachhang2` (`Customer8`): xem hóa đơn đang đặt và chi tiết hóa đơn.
-   - `quanly1` (`Manager8`): xem thống kê nhà cung cấp theo lượng hàng nhập và lịch sử nhập hàng.
-   - `banhang1` (`SalesStaff8`), `giaohang1` (`DeliveryStaff8`): bị từ chối đăng nhập vì ngoài phạm vi hai vai trò hỗ trợ.
-   - **Lưu ý khi dùng CSDL cũ**: `PasswordUtil8` chỉ chấp nhận hash `PBKDF2WithHmacSHA256` có salt (không nhận mật khẩu rõ hoặc SHA-256 cũ). Nếu bảng `tblMember8` đang lưu hash cũ, chạy lệnh sau để tạo hash mới rồi cập nhật bằng câu lệnh SQL `UPDATE`:
-     ```powershell
-     .\mvnw.cmd compile
-     java -cp target\classes util.PasswordUtil8 <mat-khau-moi>
-     ```
-
 5. **Build và chạy kiểm thử bằng Maven Wrapper**:
    ```powershell
    .\mvnw.cmd clean verify
