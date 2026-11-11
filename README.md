@@ -16,7 +16,7 @@
    ```
 
 2. **Khởi động MySQL trong XAMPP và import cơ sở dữ liệu**:
-   - Mở **XAMPP Control Panel**, khởi động **MySQL** (cổng `3306`). Có thể giữ **Apache** (cổng `8080`) để mở phpMyAdmin; tuyệt đối không bật Tomcat.
+   - Mở **XAMPP Control Panel**, khởi động **MySQL** (cổng `3306`). Có thể giữ **Apache** (cổng `8080`) để mở phpMyAdmin.
    - Mở `http://localhost:8080/phpmyadmin/`, chọn **Import** và nạp tệp `sql/shopman_db.sql` để tạo CSDL `shopman`, 12 bảng và dữ liệu mẫu.
 
 3. **Tạo và cấu hình tệp kết nối cơ sở dữ liệu**:
@@ -94,18 +94,3 @@ ShopMan/
 ├── mvnw.cmd
 ├── pom.xml
 └── README.md
-```
-
-- `src/main/java/model/`: Các lớp thực thể OOP của hệ thống (`Member8`, `Customer8`, `Employee8`, `Manager8`, `SalesStaff8`, `DeliveryStaff8`, `Supplier8`, `SupplierImportStatistics8`, `Product8`, `ImportStatistics8`, `ExportStatistics8`, `CustomerStatistic8`, `Invoice8`, `InvoiceDetail8`, `ImportInvoice8`, `ImportInvoiceDetail8`).
-- `src/main/java/dao/`: Lớp nền `DAO8`, ngoại lệ `DataAccessException8` và các DAO JDBC (`MemberDAO8`, `InvoiceDAO8`, `InvoiceDetailDAO8`, `SupplierDAO8`, `ImportInvoiceDAO8`, `ImportInvoiceDetailDAO8`).
-- `src/main/java/filter/`: Bộ lọc `CharacterEncodingFilter8` (UTF-8) và `AuthenticationFilter8` (kiểm tra session, phân quyền `/customer/*`, `/manager/*`).
-- `src/main/java/util/`: Tiện ích dùng chung (`DBUtil8`, `PasswordUtil8`, `DateUtil8`, `PortCheckUtil8`).
-- `src/main/resources/`: Chứa `db.properties.example` làm mẫu cấu hình kết nối DB; tệp `db.properties` thực tế do người dùng tạo cục bộ và được `.gitignore` bỏ qua.
-- `src/main/webapp/`: Mã nguồn giao diện JSP/JSTL theo vai trò (`member/`, `customer/`, `manager/`), trang gốc `index.jsp` và trang lỗi `error.jsp`.
-- `src/main/webapp/assets/`: Tài nguyên tĩnh dùng chung gồm `css/style.css` và `js/script.js`.
-- `src/main/webapp/WEB-INF/`: Chứa `web.xml` khai báo welcome file, filter, timeout session và trang xử lý lỗi.
-- `src/test/java/`: Bộ kiểm thử JUnit trong `dao/`, `model/`, `server/` và `util/`.
-- `sql/`: Chứa `shopman_db.sql` tạo database `shopman`, bảng và dữ liệu mẫu.
-- `.mvn/`, `mvnw`, `mvnw.cmd`: Maven Wrapper giúp build và chạy dự án mà không cần cài sẵn Maven toàn cục.
-- `pom.xml`, `.gitignore`, `README.md`: Khai báo thư viện/plugin Maven + Jetty, quy tắc loại trừ Git và tài liệu hướng dẫn.
-- `target/`: Thư mục sinh tự động khi biên dịch/đóng gói Maven (`classes/`, `ShopMan.war`...), đã được `.gitignore` loại trừ và không đưa lên GitHub.
